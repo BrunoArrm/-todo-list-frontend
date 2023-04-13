@@ -8,6 +8,10 @@
     margin-top: 20px;
 }
 
+.filtrar:hover {
+    cursor: pointer;
+}
+
 .filtrar {
     font-weight: bold;
     height: 25px;

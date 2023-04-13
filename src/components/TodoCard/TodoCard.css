@@ -37,8 +37,11 @@
     background-position: center;
 }
 
-.todoCard-done:checked ~ .todoCard-input {
-    text-decoration: dashed;
+/* Estilizar apenas quando marcar a caixa */
+.todoCard-input.marcado {
+    text-decoration: line-through;
+    font-weight: bold;
+    color: rgb(129, 129, 129);
 }
 
 .todoCard-input {

@@ -11,3 +11,7 @@
   box-sizing: border-box;
   color: var(--text-main-color);
 }
+
+body {
+  background-color: var(--bg-main);
+}
