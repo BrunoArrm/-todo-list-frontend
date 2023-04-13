@@ -1,0 +1,23 @@
+.todoCard {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 500px;
+    min-height: 50px;
+    background-color: var(--bg-todo);
+    border-radius: 50px;
+}
+
+.todoCard-input {
+    border: none;
+    height: 100%;
+    width: 80%;
+    resize: none;
+}
+
+.todoCard-input:focus {
+    outline: none;
+}
