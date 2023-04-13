@@ -23,6 +23,12 @@ function Todo({ tarefas, updateTarefas }) {
         setEmptyInput("");
     }
 
+    const handlePressEnter = (event) => {
+        if (event.keyCode === 13) {
+            createTodo();
+        }
+    }
+
     return (
 
         <div className={`todo ${emptyInput}`}>
@@ -32,6 +38,7 @@ function Todo({ tarefas, updateTarefas }) {
                     className='todo-input'
                     value={inputValue}
                     onChange={handleInputChange}
+                    onKeyDown={handlePressEnter}
             />
 
             <div    className='todoClose' onClick={createTodo}/>
