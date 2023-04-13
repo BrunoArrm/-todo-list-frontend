@@ -7,9 +7,9 @@ function TodoCard({ id_tarefa, descricao, data_realizado, }) {
         <div className='todoCard' id={id_tarefa}>
             {
                 data_realizado ?
-                    <input type='checkbox'
-                        className='todoCard-done'
-                        checked
+                    <input  type='checkbox'
+                            className='todoCard-done'
+                            checked
                     />
                     :
                     <input type='checkbox'
@@ -17,10 +17,12 @@ function TodoCard({ id_tarefa, descricao, data_realizado, }) {
                     />
             }
 
-            <input type='text'
-                className='todoCard-input'
-                value={descricao} />
-            <div className='close'>X</div>
+            <input  type='text'
+                    className='todoCard-input'
+                    value={descricao}
+            />
+            
+            <div className='todoCardClose'/>
 
         </div>
 
@@ -28,7 +30,3 @@ function TodoCard({ id_tarefa, descricao, data_realizado, }) {
 }
 
 export default TodoCard;
-
-// Usar type =
-// new      : O tipo do card será um que adiciona novos cards
-// default  : Será o card do tipo padrão

@@ -2,6 +2,7 @@ import {useState} from 'react';
 import Todo from '../components/Todo/Todo';
 import TodoCard from '../components/TodoCard/TodoCard';
 import './Home.css';
+import Filter from '../components/Filter/Filter';
 
 function Home() {
 
@@ -13,10 +14,13 @@ function Home() {
 
   return (
     <main className='home'>
+        <h1>Meu ToDo List</h1>
         <Todo
             tarefas={tarefas}
             updateTarefas={updateTarefas}
         />
+
+        <Filter />
 
         {tarefas.map(( tarefa, index) => (
 

@@ -1,0 +1,34 @@
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 70%;
+    max-width: 500px;
+    min-height: 50px;
+}
+
+.filtrar {
+    font-weight: bold;
+    height: 30px;
+    width: 130px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 0 5px 1px var(--shadow);
+}
+
+.filtrar:focus {
+    outline: none;
+}
+
+.Todas {
+    background-color: #ffffff;
+}
+
+.Pendentes {
+    background-color: #d78d37;
+}
+
+.Concluídas {
+    background-color: #37d7b2;
+}

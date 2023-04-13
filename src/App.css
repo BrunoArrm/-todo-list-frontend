@@ -1,10 +1,13 @@
 :root {
   --bg-main: #f5f7f9;
   --bg-todo: white;
+  --shadow: rgba(0, 0, 0, 0.466);
+  --text-main-color: #303030;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--text-main-color);
 }

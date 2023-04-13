@@ -3,12 +3,42 @@
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 70%;
     max-width: 500px;
     min-height: 50px;
     background-color: var(--bg-todo);
     border-radius: 50px;
+    box-shadow: 0 0 5px 1px var(--shadow);
+    transition: transform .1s ease-in-out;
+}
+
+.todoCard:hover{
+    transform: scale(1.01);
+}
+
+.todoCard-done {
+    all: unset;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/icons/uncheck.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.todoCard-done:checked {
+    all: unset;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/icons/check.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.todoCard-done:checked ~ .todoCard-input {
+    text-decoration: dashed;
 }
 
 .todoCard-input {
@@ -20,4 +50,19 @@
 
 .todoCard-input:focus {
     outline: none;
+}
+
+.todoCardClose {
+    width: 25px;
+    height: 25px;
+    background-image: url(../../assets/icons/trash.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.todoCardClose:hover{
+    transform: scale(1.2);
 }

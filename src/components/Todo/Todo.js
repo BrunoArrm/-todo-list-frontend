@@ -34,9 +34,7 @@ function Todo({ tarefas, updateTarefas }) {
                     onChange={handleInputChange}
             />
 
-            <div    className='close' onClick={createTodo}>
-                +
-            </div>
+            <div    className='todoClose' onClick={createTodo}/>
 
         </div>
 
