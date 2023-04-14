@@ -12,8 +12,8 @@ function Todo({ tarefas, updateTarefas }) {
             console.log("Nada foi digitado");
             setEmptyInput("emptyInput");
         } else {
-            tarefas = [...tarefas, { id_tarefa: 123, descricao: inputValue, data_realizado: null }];
-            updateTarefas(tarefas);
+            // tarefas = [...tarefas, { id_tarefa: 0, descricao: inputValue, executado: 0 }];
+            updateTarefas({ id_tarefa: 0, descricao: inputValue, executado: 0, ordem: 0 });
             setInputValue("");
         }
     }

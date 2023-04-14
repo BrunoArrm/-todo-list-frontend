@@ -13,8 +13,24 @@
     transition: transform .1s ease-in-out;
 }
 
-.todoCard:hover{
-    transform: scale(1.01);
+/* Remove o todoCard do layout */
+.todoCard.removendo {
+    animation: removendoCard .5s;
+}
+
+@keyframes removendoCard {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+}
+
+.todoCard.removido {
+    display: none;
 }
 
 .todoCard-done {

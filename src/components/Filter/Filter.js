@@ -14,7 +14,7 @@ function Filter() {
       <select   name='Filtrar' 
                 className={`filtrar ${filterValue}`}
                 onChange={handleFilterChange}>
-        <option selected>Todas</option>
+        <option value="select">Todas</option>
         <option>Pendentes</option>
         <option>Concluídas</option>
       </select>
