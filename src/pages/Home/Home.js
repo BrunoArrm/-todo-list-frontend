@@ -9,12 +9,20 @@ function Home() {
     
     const [tarefas, setTarefas] = useState([]); // Coleção de objetos, responsável por armazenar o conteúdo dos conteineres
     
+    const [tarefasFiltradas, setTarefasFiltradas] = useState([]);
+    const [filtro, setFiltro] = useState("T");
+
     useEffect( () => {
         const carregarDados = async () => {
-            setTarefas(await GET());
+            await setTarefas(await GET());
+
         }
         carregarDados();
     },[] );
+
+    useEffect(() => {
+        filtrarTarefas("T");
+    }, [tarefas, filtro])
     
     const updateTarefas = async (tarefas) => {  // Função invocada no componente 'Todo' e sua finalidade é atualizar o estado 'Tarefas'.
         console.log('lista de tarefas: ', tarefas);
@@ -26,6 +34,29 @@ function Home() {
         setTarefas(await GET());
     };
 
+    const filtrarTarefas = (tipo) => {
+        var result = tarefas.filter(f => {
+            switch (filtro) {
+                case "R":
+                    return f.executado === 1;
+                    break;
+                case "P":
+                    return f.executado === 0;
+                    break;
+                default:
+                    return true;
+                    break;
+            }
+        })
+        console.log(result);
+        setTarefasFiltradas(result);
+    }
+
+    const efetuarFiltro = (tipo) => {
+        setFiltro(tipo);
+        // filtrarTarefas(tipo);
+    }
+
   return (
       <main className='home'>
         <h1>Meu ToDo List</h1>
@@ -34,9 +65,11 @@ function Home() {
             updateTarefas={createTarefas}
         />
 
-        <Filter />
+        <Filter filtrar={(tipo) => {
+            efetuarFiltro(tipo);
+        }} />
 
-        {tarefas.map(( tarefa, index) => (
+        {tarefasFiltradas.map(( tarefa, index) => (
             
             <TodoCard
             key={index}

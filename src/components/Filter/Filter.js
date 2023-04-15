@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import './Filter.css';
 
-function Filter() {
+function Filter(props) {
 
     const [filterValue, setFilterValue] = useState("Todas");
 
     const handleFilterChange = (event) => {
         setFilterValue(event.target.value);
+        props.filtrar(event.target.value);
     }
 
   return (
@@ -14,9 +15,9 @@ function Filter() {
       <select   name='Filtrar' 
                 className={`filtrar ${filterValue}`}
                 onChange={handleFilterChange}>
-        <option value="select">Todas</option>
-        <option>Pendentes</option>
-        <option>Concluídas</option>
+        <option value="T">Todas</option>
+        <option value="P">Pendentes</option>
+        <option value="R">Concluídas</option>
       </select>
     </div>
   );
