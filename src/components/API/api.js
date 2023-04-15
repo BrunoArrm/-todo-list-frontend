@@ -1,7 +1,8 @@
+const URL = 'https://todolist-backend-8k4i.onrender.com/tarefas';
+
 const GET = async () => {
     try {
-        let url = 'http://localhost:3000/tarefas';
-        const response = await fetch(url, {
+        const response = await fetch(URL, {
             headers: {
                 'Access-Control-Allow-Origin': '*'
             }
@@ -15,8 +16,7 @@ const GET = async () => {
 
 const POST = async (tarefa) => {
     try {
-        let url = 'http://localhost:3000/tarefas';
-        const response = await fetch(url, {
+        const response = await fetch(URL, {
             headers: { 'Content-Type': 'application/json' }, 
             body: JSON.stringify(tarefa),
             method: "POST"
@@ -30,8 +30,7 @@ const POST = async (tarefa) => {
 
 const PUT = async (tarefa) => {
     try {
-        let url = 'http://localhost:3000/tarefas';
-        const response = await fetch(url, {
+        const response = await fetch(URL, {
             headers: { 'Content-Type': 'application/json' }, 
             body: JSON.stringify(tarefa),
             method: "PUT"
@@ -45,8 +44,7 @@ const PUT = async (tarefa) => {
 
 const DELETE = async (tarefa) => {
     try {
-        let url = 'http://localhost:3000/tarefas';
-        const response = await fetch(url, {
+        const response = await fetch(URL, {
             headers: { 'Content-Type': 'application/json' }, 
             body: JSON.stringify(tarefa),
             method: "DELETE"
