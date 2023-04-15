@@ -21,8 +21,6 @@ const POST = async (tarefa) => {
             body: JSON.stringify(tarefa),
             method: "POST"
         });
-        const data = await response.json();
-        return data;
     } catch (error) {
         console.log("API ERRO: ", error);
     }
@@ -35,8 +33,6 @@ const PUT = async (tarefa) => {
             body: JSON.stringify(tarefa),
             method: "PUT"
         });
-        const data = await response.json();
-        return data;
     } catch (error) {
         console.log("API ERRO: ", error);
     }
@@ -49,8 +45,6 @@ const DELETE = async (tarefa) => {
             body: JSON.stringify(tarefa),
             method: "DELETE"
         });
-        const data = await response.json();
-        return data;
     } catch (error) {
         console.log("API ERRO: ", error);
     }
