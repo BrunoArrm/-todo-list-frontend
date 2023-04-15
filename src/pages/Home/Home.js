@@ -35,7 +35,7 @@ function Home() {
     };
 
     const filtrarTarefas = (tipo) => {
-        var result = tarefas.filter(f => {
+        var result = tarefas?.filter(f => {
             switch (filtro) {
                 case "R":
                     return f.executado === 1;
@@ -47,7 +47,7 @@ function Home() {
                     return true;
                     break;
             }
-        })
+        }) || [];
         console.log(result);
         setTarefasFiltradas(result);
     }

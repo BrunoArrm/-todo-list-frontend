@@ -1,4 +1,5 @@
-const URL = 'https://todolist-backend-8k4i.onrender.com/tarefas';
+// const URL = 'https://todolist-backend-8k4i.onrender.com/tarefas';
+const URL = 'http://localhost:3000/tarefas';
 
 const GET = async () => {
     try {
@@ -21,6 +22,7 @@ const POST = async (tarefa) => {
             body: JSON.stringify(tarefa),
             method: "POST"
         });
+        return response;
     } catch (error) {
         console.log("API ERRO: ", error);
     }
@@ -33,6 +35,7 @@ const PUT = async (tarefa) => {
             body: JSON.stringify(tarefa),
             method: "PUT"
         });
+        return response;
     } catch (error) {
         console.log("API ERRO: ", error);
     }
@@ -45,6 +48,7 @@ const DELETE = async (tarefa) => {
             body: JSON.stringify(tarefa),
             method: "DELETE"
         });
+        return response;
     } catch (error) {
         console.log("API ERRO: ", error);
     }
